@@ -18,7 +18,7 @@ class Post_footballer(models.Model):
     footballer_curr_club  = models.CharField(max_length=100, default='')
   
     created_date = models.DateTimeField(default=timezone.now)
-    last_mod_date = models.DateTimeField(blank=True, null=True)
+    last_mod_date = models.DateTimeField(default=timezone.now)
 
 
 def publish(self):
