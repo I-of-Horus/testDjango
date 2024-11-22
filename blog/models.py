@@ -14,12 +14,11 @@ class Post(models.Model):
 """
 class Post_footballer(models.Model):
     author = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
-    footballer_name = models.CharField(max_length=100, default="default name")
-    footballer_curr_club  = models.CharField(max_length=100, default="default clubname")
+    footballer_name = models.CharField(max_length=100, default='')
+    footballer_curr_club  = models.CharField(max_length=100, default='')
   
     created_date = models.DateTimeField(default=timezone.now)
     last_mod_date = models.DateTimeField(blank=True, null=True)
-    published_date = models.DateTimeField(blank=True, null=True)
 
 
 def publish(self):
